@@ -32,6 +32,13 @@ public class UserService {
        return userRepository.save(user);
     }
 
+//    public String checkValidUser(String username) {
+//        if(userRepository.findByUsername(username) == username){
+//            return "Logged in";
+//        } else return "fak off";
+//
+//    }
+
 //    public User updateUser(Long id, UserDTO userDTO) {
 //    User updatedUser = userRepository.findById(id).get();
 //    updatedUser = new User(userDTO.getUsername(), userDTO.getPassword(), userDTO.getEmail(), userDTO.getBirthday(), shop)
@@ -40,4 +47,6 @@ public class UserService {
     public void deleteUser(Long id){
         userRepository.deleteById(id);
     }
+
+
 }

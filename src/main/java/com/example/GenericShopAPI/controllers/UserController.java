@@ -47,4 +47,16 @@ public class UserController {
         userService.deleteUser(id);
         return new ResponseEntity<>("User data deleted", HttpStatus.OK);
     }
+
+//    MAGIC LOGIN
+//    @PostMapping
+//    public ResponseEntity<String> logInUser(@RequestParam String username, @RequestParam String password){
+//        return new ResponseEntity<>(userService.checkValidUser(username, password), HttpStatus.ACCEPTED);
+//    }
+
+//    @PostMapping
+//    public ResponseEntity<String> logInUser(@RequestParam String username){
+//        return new ResponseEntity<>(userService.checkValidUser(username), HttpStatus.ACCEPTED);
+//    }
+
 }

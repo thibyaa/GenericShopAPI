@@ -8,9 +8,9 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column
+    @Column(name = "product_name")
     private String productName;
-    @Column
+    @Column(name = "product_price")
     private double productPrice;
     @ManyToOne
     @JoinColumn(name = "shop_id")

@@ -14,24 +14,30 @@ public class Product {
     private double productPrice;
     @ManyToOne
     @JoinColumn(name = "shop_id")
-    @JsonIgnoreProperties({"product"})
+    @JsonIgnoreProperties({"products"})
     private Shop shop;
+
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    @JsonIgnoreProperties({"product"})
+//    private User user;
 
     public Product(String productName, double productPrice, Shop shop){
         this.productName = productName;
         this.productPrice = productPrice;
         this.shop = shop;
+//        this.user = user;
     }
 
     public Product(){
 
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -58,4 +64,12 @@ public class Product {
     public void setShop(Shop shop) {
         this.shop = shop;
     }
+
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

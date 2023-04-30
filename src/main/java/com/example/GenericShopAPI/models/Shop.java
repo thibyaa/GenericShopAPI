@@ -22,22 +22,24 @@ public class Shop {
     @Column
     private double till;
 
-    private Shop(String shopName){
+    public Shop(String shopName){
         this.shopName = shopName;
         this.users = new ArrayList<>();
         this.products = new ArrayList<>();
         this.till = 0.00;
     }
 
-    private Shop(){
+//    EMPTY CONSTRUCTOR
+    public Shop(){
 
     }
 
-    public long getId() {
+//    GETTERS AND SETTERS
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -71,5 +73,11 @@ public class Shop {
 
     public void setTill(double till) {
         this.till = till;
+    }
+
+//    CUSTOM METHODS
+    public void updateTill(Product product){
+        double newBalance = till + product.getProductPrice();
+        setTill(newBalance);
     }
 }

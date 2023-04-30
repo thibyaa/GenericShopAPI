@@ -1,41 +1,25 @@
 package com.example.GenericShopAPI.models;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
-@Entity(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
+
     private Long id;
-    @Column(name = "username")
     private String username;
-    @Column(name = "password")
     private String password;
-    @Column(name = "email")
     private String email;
-    @Column(name = "birthday")
     private LocalDate birthday;
-    @ManyToOne
-    @JoinColumn(name = "shop_id")
-    @JsonIgnoreProperties({"users"})
-    private Shop shop;
-//    @OneToMany(mappedBy = "products")
-//    @JsonIgnoreProperties({"user"})
-//    private List<Product> product;
+    private Long shopId;
 
-    public User(String username, String password, String email, LocalDate birthday, Shop shop){
+    public UserDTO(String username, String password, String email, LocalDate birthday, Long shopId){
         this.username = username;
         this.password = password;
         this.email = email;
         this.birthday = birthday;
-        this.shop = shop;
-//        this.product = new ArrayList<>();
+        this.shopId = shopId;
+
     }
 
-    public User(){
+    public UserDTO(){
 
     }
 
@@ -79,19 +63,11 @@ public class User {
         this.birthday = birthday;
     }
 
-    public Shop getShop() {
-        return shop;
+    public Long getShopId() {
+        return shopId;
     }
 
-    public void setShop(Shop shop) {
-        this.shop = shop;
+    public void setShopId(Long shopId) {
+        this.shopId = shopId;
     }
-
-//    public List<Product> getProduct() {
-//        return product;
-//    }
-//
-//    public void setProduct(List<Product> product) {
-//        this.product = product;
-//    }
 }

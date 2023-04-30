@@ -1,2 +1,4 @@
-package com.example.GenericShopAPI.services;public class UserService {
+package com.example.GenericShopAPI.services;
+
+public class UserService {
 }

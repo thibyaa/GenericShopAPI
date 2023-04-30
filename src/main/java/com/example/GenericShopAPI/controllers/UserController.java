@@ -1,2 +1,4 @@
-package com.example.GenericShopAPI.controllers;public class UserController {
+package com.example.GenericShopAPI.controllers;
+
+public class UserController {
 }

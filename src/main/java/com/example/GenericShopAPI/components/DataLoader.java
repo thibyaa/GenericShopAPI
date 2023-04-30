@@ -1,2 +1,4 @@
-package com.example.GenericShopAPI.components;public class DataLoader {
+package com.example.GenericShopAPI.components;
+
+public class DataLoader {
 }

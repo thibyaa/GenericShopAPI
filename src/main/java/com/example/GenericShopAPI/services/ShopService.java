@@ -15,5 +15,4 @@ public class ShopService {
     public Shop shopDetails(Long id) {
         return shopRepository.findById(id).get();
     }
-
 }

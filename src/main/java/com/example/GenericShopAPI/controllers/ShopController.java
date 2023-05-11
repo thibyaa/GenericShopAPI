@@ -18,7 +18,4 @@ public class ShopController {
     public ResponseEntity<Shop> getShopDetails(@PathVariable Long id){
         return new ResponseEntity<>(shopService.shopDetails(id), HttpStatus.OK);
     }
-
-//
-
 }

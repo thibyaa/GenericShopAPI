@@ -58,5 +58,5 @@ public class UserController {
 //    public ResponseEntity<String> logInUser(@RequestParam String username){
 //        return new ResponseEntity<>(userService.checkValidUser(username), HttpStatus.ACCEPTED);
 //    }
-
+// attempting to work out which of these two post mapping methods are the correct way
 }
